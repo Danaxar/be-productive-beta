@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    background-repeat: no-repeat;
+}
+
+header {
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 3%;
+}
+
+main {
+    display: flex;
+}
+
+/* Effects */
+
+.blur {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(40px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.curvedRadius {
+    border-radius: 30px 30px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Elements */
+
+#center {
+    color: white;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Checkbox animation */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.switch::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    left: 5px;
+    top: 5px;
+    transition: all 0.4s;
+}
+
+input[type='checkbox']:checked+.switch::after {
+    transform: translateX(40px);
+    background-color: rgb(255, 255, 255);
+}
+
+input[type='checkbox']:checked+.switch {
+    background-color: rgba(91, 218, 77, 255);
+    transition: 0.3s;
+}
+
+.offscreen {
+    position: absolute;
+    left: -999999px;
+}
+/* ----------------------------------------- */

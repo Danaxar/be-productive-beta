@@ -1,0 +1,4 @@
+Minecraft.exe
+LeagueClient.exe
+FortniteClient-Win64-Shipping.exe
+VALORANT.exe

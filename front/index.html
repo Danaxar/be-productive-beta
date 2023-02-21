@@ -13,11 +13,11 @@
     <link
         href="https://img.icons8.com/external-stickers-smashing-stocks/256/external-Sand-Timer-love-stickers-smashing-stocks.png"
         rel="shortcut icon">
+    <script src="clock.js"></script>
 
 </head>
 
 <body>
-
     <header>
         Be productive
         <h6>And stay focus.</h6>
@@ -25,19 +25,28 @@
     <main>
         <div class="blur curvedRadius" id="center">
             <h2>On / Off</h2>
-
             <!-- Chekbox -->
             <div class="wrap-toggle" id="switchInput">
                 <input type="checkbox" id="toggle" class="offscreen">
                 <label for="toggle" class="switch"></label>
             </div>
-
-            <!-- Checkbox controller -->
-            <script src="main.js" />
+        </div>
+        <div class="blur curvedRadius" id="timer">
+            <h2>Timer ⏳</h2>
+            <div>
+                <input type="number" min="0" name="minutes" value="50" id="minutes">
+                :
+                <input type="number" min="0" max="60" name="seconds" value="00" id="seconds">
+            </div>
+            <div id="divBtn">
+                <button id="clockButton" class="curvedRadius startButton">Start</button>
+            </div>
         </div>
     </main>
-    <footer>
-    </footer>
+
+    <!-- Checkbox controller -->
+    <script src="main.js" />
+    <script src="clock.js" />
 </body>
 
 </html>

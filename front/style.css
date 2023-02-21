@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
+    color: white;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
 }
 
 header {
-    color: white;
     font-size: 5vw;
     text-align: center;
     padding-top: 10%;
@@ -21,6 +21,7 @@ header {
 
 main {
     display: flex;
+    justify-content: space-around;
 }
 
 /* Effects */
@@ -40,13 +41,17 @@ main {
 /* Elements */
 
 #center {
-    color: white;
-    width: 500px;
-    margin: auto;
+    width: 200px;
     text-align: center;
 }
 
 /* Checkbox animation */
+#switchInput{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .switch {
     position: relative;
     display: inline-block;
@@ -87,3 +92,34 @@ input[type='checkbox']:checked+.switch {
     left: -999999px;
 }
 /* ----------------------------------------- */
+/* Clock style */
+#timer div{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#timer h2{
+    text-align: center;
+}
+#timer input{
+    text-align: center;
+    width: 70px;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.startButton{
+    background-color: #1bd396;
+}
+
+.stopButton{
+    background-color: #e24f3c;
+}
+
+#divBtn{
+    display: flex;
+    justify-content: center;
+}

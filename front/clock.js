@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (seconds.value == 0) {
             minutes.value--;
             seconds.value += 60;
+            minutes.value = 0 + minutes.value;
           }
           seconds.value--;
           seconds.value < 10 ? (seconds.value = 0 + seconds.value) : null;

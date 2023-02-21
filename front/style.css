@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
     color: white;
+    /* Evitar que el texto se pueda seleccionar */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* estándar */
 }
 
 body {

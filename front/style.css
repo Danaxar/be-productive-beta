@@ -26,7 +26,7 @@ header {
 
 main {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 /* Effects */
@@ -43,11 +43,24 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/* Elements */
+.flexbox{
+    display: flex;
+}
 
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+/* Elements */
 #center {
     width: 200px;
     text-align: center;
+}
+
+main > div{
+    margin-left: 6.5rem;
+    margin-right: 6.5rem;
 }
 
 /* Checkbox animation */
@@ -127,4 +140,59 @@ input[type='checkbox']:checked+.switch {
 #divBtn{
     display: flex;
     justify-content: center;
+}
+
+/* Search bar */
+
+
+input[type='search']{
+    width: 500px;
+}
+
+input[type='search']:focus{
+    outline: none;
+}
+
+input[type='search']::placeholder{
+    color:#dcddcf
+}
+
+#searchBar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+#searchBar button{
+    background-color: #1bd396;
+}
+
+#searchBar > *{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Programs to close */
+div#programs{
+    text-align: center;
+    width: 30rem;
+    height: 10rem;
+}
+#listPrograms img{
+    width: 50px;
+    height: 50px;
+    margin: 0.3rem
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+footer a{
+    text-decoration: none;
 }

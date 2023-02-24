@@ -19,11 +19,30 @@
 
 <body>
     <header>
-        Be productive
+        Be productive 🌱
         <h6>And stay focus.</h6>
     </header>
+    <div class="flexbox center" id="searchBar">
+        <datalist id="programs">
+            <option value="League of Legends"></option>
+            <option value="Counter Strike: Global Offensive"></option>
+            <option value="Among Us"></option>
+            <option value="Valorant"></option>
+            <option value="Dota 2"></option>
+            <option value="Fornite"></option>
+            <option value="Grand Theft Auto V"></option>
+            <option value="Minecraft"></option>
+            <option value="Overwatch"></option>
+            <option value="PlayerUnknown's Battleground (PUBG)"></option>
+            <option value="World of Warcraft"></option>
+        </datalist>
+        <input type="search" class="blur curvedRadius" list="programs" placeholder="Write a program to close  . . . "
+            spellcheck="false">
+        <button class="curvedRadius">Add</button>
+
+    </div>
     <main>
-        <div class="blur curvedRadius" id="center">
+        <div class="blur curvedRadius" id="center" value="hola">
             <h2>On / Off</h2>
             <!-- Chekbox -->
             <div class="wrap-toggle" id="switchInput">
@@ -42,7 +61,27 @@
                 <button id="clockButton" class="curvedRadius startButton">Start</button>
             </div>
         </div>
+        <div class="blur curvedRadius" id="programs">
+            <h2>Programs to close</h2>
+            <div id="listPrograms">
+                <!-- Borrar -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/LoL_icon.svg/1200px-LoL_icon.svg.png"
+                    alt="">
+                <img src="https://seeklogo.com/images/V/valorant-logo-FAB2CA0E55-seeklogo.com.png" alt="">
+                <img src="https://i.pinimg.com/474x/45/73/0b/45730ba3ffe768049af74193fdfd9ecc.jpg" alt="">
+                <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/b035d6563a2adac9f822940c145263ce.png"
+                    alt="">
+                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png" alt="">
+                <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/icon/2c45628967cbb49aba60cff3b368ed95.png" alt="">
+
+            </div>
+        </div>
     </main>
+    <footer>
+        Made by
+        <a href="https://github.com/Danaxar" target="_blank">@Danaxar </a> &
+        <a href="https://github.com/vastien" target="_blank">@vastien </a>
+    </footer>
 
     <!-- Checkbox controller -->
     <script src="main.js" />

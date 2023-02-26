@@ -5,20 +5,20 @@ document.addEventListener("DOMContentLoaded", function () {
   var seconds = document.querySelector('input[type="number"][name="seconds"]'); // Input seconds
   var intervalo; // Interval object
 
+  // Invert the button function start <-> stop
+  const changeBtn = () => {
+    if (clockBtn.childNodes[0].data === "Start") {
+      clockBtn.childNodes[0].data = "Stop";
+      clockBtn.classList.replace("startButton", "stopButton");
+    } else {
+      clockBtn.childNodes[0].data = "Start";
+      clockBtn.classList.replace("stopButton", "startButton");
+    }
+  };
+
   // Add event
   clockBtn.addEventListener("click", () => {
     if (clockBtn.childNodes[0].data === "Start") {
-      // Invert the button
-      const changeBtn = () => {
-        if (clockBtn.childNodes[0].data === "Start") {
-          clockBtn.childNodes[0].data = "Stop";
-          clockBtn.classList.replace("startButton", "stopButton");
-        } else {
-          clockBtn.childNodes[0].data = "Start";
-          clockBtn.classList.replace("stopButton", "startButton");
-        }
-      };
-
       // Interval discounting the clock
       intervalo = setInterval(() => {
         // Finished?
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (seconds.value == 0) {
             minutes.value--;
             seconds.value += 60;
-            minutes.value = 0 + minutes.value;
+            minutes.value < 10 ? (minutes.value = 0 + minutes.value) : null;
           }
           seconds.value--;
           seconds.value < 10 ? (seconds.value = 0 + seconds.value) : null;
